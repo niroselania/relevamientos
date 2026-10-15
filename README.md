@@ -7,10 +7,13 @@ App web en español para consultar, buscar, agregar, editar y eliminar equipos. 
 - Las cinco pestañas detectadas: Computadoras, Colectora Datos, Tablet, Faltantes y Dadas de baja.
 - Búsqueda en todos los nombres de campo y valores, sin distinguir mayúsculas ni acentos.
 - Alta, edición, eliminación y exportación CSV por pestaña.
+- Color opcional por fila para distinguir registros sin afectar los demás.
 - Persistencia SQLite en el volumen Docker `relevamiento_data`. La autenticación es opcional: si definís `APP_PASSWORD`, se solicitarán credenciales; si la dejás vacía, no se pedirá contraseña.
 - Bot de Telegram `sistemarelevamiento_bot`, conectado a la misma base de datos que el sitio y con búsqueda en todas las pestañas y columnas.
 
 La pestaña **Dadas de baja** no tenía encabezados; se cargó usando los primeros nueve encabezados de Computadoras, en el orden de los datos originales. En **Tablet** se conservaron los 16 campos y su orden, incluidos encabezados repetidos.
+
+Para marcar una fila, abrila, elegí un color (por ejemplo, **Naranja**) y guardá los cambios. El color queda asociado a esa fila; **Sin color** lo quita. Los otros registros no cambian.
 
 ## Subir a GitHub
 

@@ -8,13 +8,16 @@ import base64, json, os, sqlite3, uuid
 ROOT=Path(__file__).resolve().parent
 DATA=Path(os.environ.get('DATA_DIR','/data')); DATA.mkdir(parents=True,exist_ok=True)
 DB=DATA/'relevamiento.db'; USER=os.environ.get('APP_USER',''); PASSWORD=os.environ.get('APP_PASSWORD','')
+ROW_COLORS={'none','orange','yellow','green','blue','red','purple'}
 def connect():
     db=sqlite3.connect(DB,timeout=30); db.row_factory=sqlite3.Row; return db
 def initialize():
     with connect() as db:
         db.execute('PRAGMA journal_mode=WAL')
         db.execute('CREATE TABLE IF NOT EXISTS categories(id TEXT PRIMARY KEY,name TEXT,fields TEXT,position INTEGER)')
-        db.execute('CREATE TABLE IF NOT EXISTS records(id TEXT PRIMARY KEY,category_id TEXT,data TEXT,position INTEGER DEFAULT 0,updated_at TEXT DEFAULT CURRENT_TIMESTAMP)')
+        db.execute("CREATE TABLE IF NOT EXISTS records(id TEXT PRIMARY KEY,category_id TEXT,data TEXT,position INTEGER DEFAULT 0,updated_at TEXT DEFAULT CURRENT_TIMESTAMP,color TEXT NOT NULL DEFAULT 'none')")
+        if 'color' not in {row['name'] for row in db.execute('PRAGMA table_info(records)')}:
+            db.execute("ALTER TABLE records ADD COLUMN color TEXT NOT NULL DEFAULT 'none'")
         if db.execute('SELECT COUNT(*) FROM categories').fetchone()[0]==0:
             for pos,c in enumerate(json.loads((ROOT/'seed.json').read_text(encoding='utf-8'))['categories']):
                 db.execute('INSERT INTO categories VALUES(?,?,?,?)',(c['id'],c['name'],json.dumps(c['fields'],ensure_ascii=False),pos))
@@ -23,8 +26,8 @@ def categories():
     with connect() as db:
         result=[]
         for c in db.execute('SELECT * FROM categories ORDER BY position'):
-            records=db.execute('SELECT id,data,updated_at FROM records WHERE category_id=? ORDER BY position,rowid',(c['id'],)).fetchall()
-            result.append({'id':c['id'],'name':c['name'],'fields':json.loads(c['fields']),'records':[{'id':r['id'],'values':json.loads(r['data']),'updatedAt':r['updated_at']} for r in records]})
+            records=db.execute('SELECT id,data,color,updated_at FROM records WHERE category_id=? ORDER BY position,rowid',(c['id'],)).fetchall()
+            result.append({'id':c['id'],'name':c['name'],'fields':json.loads(c['fields']),'records':[{'id':r['id'],'values':json.loads(r['data']),'color':r['color'],'updatedAt':r['updated_at']} for r in records]})
         return result
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self,*a,**kw): super().__init__(*a,directory=str(ROOT),**kw)
@@ -54,12 +57,13 @@ class Handler(SimpleHTTPRequestHandler):
         if not self.auth():return
         if urlparse(self.path).path!='/api/records':return self.json(404,{'error':'No encontrado'})
         try:
-            p=self.payload(); cid=str(p['categoryId']); values=p['values']; rid=str(uuid.uuid4())
+            p=self.payload(); cid=str(p['categoryId']); values=p['values']; color=p.get('color','none'); rid=str(uuid.uuid4())
             if not isinstance(values,dict):raise ValueError('Campos no válidos')
+            if color not in ROW_COLORS:raise ValueError('Color no válido')
             with connect() as db:
                 if not db.execute('SELECT 1 FROM categories WHERE id=?',(cid,)).fetchone():return self.json(404,{'error':'Pestaña no encontrada'})
                 pos=db.execute('SELECT COALESCE(MAX(position),-1)+1 FROM records WHERE category_id=?',(cid,)).fetchone()[0]
-                db.execute('INSERT INTO records(id,category_id,data,position) VALUES(?,?,?,?)',(rid,cid,json.dumps(values,ensure_ascii=False),pos))
+                db.execute('INSERT INTO records(id,category_id,data,position,color) VALUES(?,?,?,?,?)',(rid,cid,json.dumps(values,ensure_ascii=False),pos,color))
             return self.json(201,{'id':rid})
         except (ValueError,KeyError,json.JSONDecodeError) as e:return self.json(400,{'error':str(e)})
     def do_PUT(self):
@@ -67,10 +71,11 @@ class Handler(SimpleHTTPRequestHandler):
         parts=urlparse(self.path).path.strip('/').split('/')
         if len(parts)!=3 or parts[:2]!=['api','records']:return self.json(404,{'error':'No encontrado'})
         try:
-            values=self.payload().get('values')
+            p=self.payload(); values=p.get('values'); color=p.get('color','none')
             if not isinstance(values,dict):raise ValueError('Campos no válidos')
+            if color not in ROW_COLORS:raise ValueError('Color no válido')
             with connect() as db:
-                cur=db.execute('UPDATE records SET data=?,updated_at=CURRENT_TIMESTAMP WHERE id=?',(json.dumps(values,ensure_ascii=False),parts[2]))
+                cur=db.execute('UPDATE records SET data=?,color=?,updated_at=CURRENT_TIMESTAMP WHERE id=?',(json.dumps(values,ensure_ascii=False),color,parts[2]))
                 if cur.rowcount==0:return self.json(404,{'error':'Registro no encontrado'})
             return self.json(200,{'ok':True})
         except (ValueError,json.JSONDecodeError) as e:return self.json(400,{'error':str(e)})
