@@ -8,7 +8,7 @@ services:
       - "${APP_PORT:-8080}:8080"
     environment:
       APP_USER: ${APP_USER:-admin}
-      APP_PASSWORD: ${APP_PASSWORD:?Definí APP_PASSWORD en las variables del stack}
+      APP_PASSWORD: ${APP_PASSWORD:-}
       DATA_DIR: /data
     volumes:
       - relevamiento_data:/data

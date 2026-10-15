@@ -30,7 +30,7 @@ class Handler(SimpleHTTPRequestHandler):
     def __init__(self,*a,**kw): super().__init__(*a,directory=str(ROOT),**kw)
     def log_message(self,fmt,*args): print('%s - %s'%(self.address_string(),fmt%args),flush=True)
     def auth(self):
-        if not USER and not PASSWORD:return True
+        if not PASSWORD:return True
         try:
             scheme,value=self.headers.get('Authorization','').split(' ',1); u,p=base64.b64decode(value).decode().split(':',1); ok=scheme.lower()=='basic' and u==USER and p==PASSWORD
         except Exception:ok=False
