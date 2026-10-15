@@ -1,0 +1,1386 @@
+{
+  "categories": [
+    {
+      "id": "computadoras",
+      "name": "Computadoras",
+      "fields": [
+        {
+          "key": "f1",
+          "label": "Empleado"
+        },
+        {
+          "key": "f2",
+          "label": "Tipo de Equipo"
+        },
+        {
+          "key": "f3",
+          "label": "Ubicacion"
+        },
+        {
+          "key": "f4",
+          "label": "Modelo  de equipo"
+        },
+        {
+          "key": "f5",
+          "label": "Serie"
+        },
+        {
+          "key": "f6",
+          "label": "Espacio de Disco (Max)"
+        },
+        {
+          "key": "f7",
+          "label": "Memoria(Max)"
+        },
+        {
+          "key": "f8",
+          "label": "Termino de garantia"
+        },
+        {
+          "key": "f9",
+          "label": "ACTUALIZABLE"
+        },
+        {
+          "key": "f10",
+          "label": "FECHA ACTUALIZACION"
+        },
+        {
+          "key": "f11",
+          "label": "OS"
+        },
+        {
+          "key": "f12",
+          "label": "Zero Trust"
+        }
+      ],
+      "records": [
+        {
+          "id": "computadoras-001",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "Notebook",
+            "f3": "Bariloche",
+            "f4": "ThinkPad L14 Gen 4",
+            "f5": "PW07HGC1",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "12 meses",
+            "f9": "OK",
+            "f10": null,
+            "f11": null,
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-002",
+          "values": {
+            "f1": "CAJA 1",
+            "f2": "Desktop",
+            "f3": "Bariloche",
+            "f4": "ThinkCentre neo 50s Gen 4",
+            "f5": "YLT0SYVD",
+            "f6": "500 GB",
+            "f7": "8GB",
+            "f8": "18 meses",
+            "f9": "NO",
+            "f10": null,
+            "f11": null,
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-003",
+          "values": {
+            "f1": "CAJA 2",
+            "f2": "Desktop",
+            "f3": "Bariloche",
+            "f4": "ThinkCentre neo 50s Gen 4",
+            "f5": "YLT0SYT8",
+            "f6": "500 GB",
+            "f7": "8GB",
+            "f8": "18 meses",
+            "f9": "NO",
+            "f10": null,
+            "f11": null,
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-004",
+          "values": {
+            "f1": "MONITOR CAJA 2 - BARILOCHE",
+            "f2": null,
+            "f3": "Bariloche",
+            "f4": "Lenovo D22e-20",
+            "f5": "URHK8YH5 - MONITOR",
+            "f6": "--",
+            "f7": "--",
+            "f8": "18 meses",
+            "f9": "--",
+            "f10": null,
+            "f11": null,
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-005",
+          "values": {
+            "f1": "MONITOR CAJA 1 - BARILOCHE",
+            "f2": null,
+            "f3": "Bariloche",
+            "f4": "Lenovo D22e-20",
+            "f5": "URHK8YHA - MONITOR",
+            "f6": "--",
+            "f7": "--",
+            "f8": "18 meses",
+            "f9": "--",
+            "f10": null,
+            "f11": null,
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-006",
+          "values": {
+            "f1": "GERONIMO BAVIO",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF3ENW6S",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-007",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "Notebook",
+            "f3": "CD",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF3NDP31",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-008",
+          "values": {
+            "f1": "JONATAN CABALLERO (Estacion 1°)",
+            "f2": "Desktop",
+            "f3": "CD",
+            "f4": "ALL IN ONE - Inter i3 (4th)",
+            "f5": "-",
+            "f6": "500 GB",
+            "f7": "8GB",
+            "f8": "CADUCADA",
+            "f9": "NO",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-009",
+          "values": {
+            "f1": "EN DEPOSITO (Estacion 3°)",
+            "f2": "Desktop",
+            "f3": "CD",
+            "f4": "13th Intel(R) Core(TM) i5-13420",
+            "f5": "YJ01NHV9",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-010",
+          "values": {
+            "f1": "EN DEPOSITO (Estacion 2°)",
+            "f2": "Notebook",
+            "f3": "CD",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF3FZYW8",
+            "f6": "500 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-011",
+          "values": {
+            "f1": "DAMIAN SANCHEZ (Estacion  Damian)",
+            "f2": "Notebook",
+            "f3": "CD",
+            "f4": "ThinkPad L14 Gen 1",
+            "f5": "PF2SKV7",
+            "f6": "500 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-012",
+          "values": {
+            "f1": "EN DEPOSITO (Estacion HP)",
+            "f2": "Desktop",
+            "f3": "CD",
+            "f4": "HP Compaq Elite 8300",
+            "f5": "B2D08LT#AC8",
+            "f6": "120 GB",
+            "f7": "8GB",
+            "f8": "CADUCADA",
+            "f9": "NO",
+            "f10": null,
+            "f11": "W 10",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-013",
+          "values": {
+            "f1": "ESTACION LENOVO E490",
+            "f2": "Notebook",
+            "f3": "CD",
+            "f4": "ThinkPad E490",
+            "f5": "PF1B9WWC",
+            "f6": "256 GB",
+            "f7": "8GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": null,
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-014",
+          "values": {
+            "f1": "ESTACION LENOVO E450",
+            "f2": "Notebook",
+            "f3": "CD",
+            "f4": "ThinkPad L450",
+            "f5": "PF0DJ6LW",
+            "f6": "256 GB",
+            "f7": "8GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 10",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-015",
+          "values": {
+            "f1": "Lua Nicolao",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF30V7JG",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": "2025-02-12T00:00:00",
+            "f11": "W 10",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-016",
+          "values": {
+            "f1": "Rosa Lara Aponte Sanga",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2a",
+            "f5": "PF3WL1Q7",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 10",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-017",
+          "values": {
+            "f1": "Paula Saporiti",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 3",
+            "f5": "PW046NPN",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "2026-11-06T00:00:00",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-018",
+          "values": {
+            "f1": "Federico Kohldorfer",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF3ELXZT",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-019",
+          "values": {
+            "f1": "Florencia Lerner",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 3",
+            "f5": "PW046NPS",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "13/11/2026",
+            "f9": "OK",
+            "f10": null,
+            "f11": null,
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-020",
+          "values": {
+            "f1": "Barbara Bade",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF3WGAKN",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 10",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-021",
+          "values": {
+            "f1": "Fernanda Ganam",
+            "f2": "Notebook",
+            "f3": "HomeOffice",
+            "f4": "ThinkPadL14Gen1",
+            "f5": "PF2LVMSK",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-022",
+          "values": {
+            "f1": "Patagonia /s Asignar",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2a",
+            "f5": "PF3NSL0Q",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "2025-06-25T00:00:00",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-023",
+          "values": {
+            "f1": "Albertina Feeney",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad E14 Gen 4",
+            "f5": "PF4APT7G",
+            "f6": "256 GB",
+            "f7": "24GB",
+            "f8": "2026-01-09T00:00:00",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 10",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-024",
+          "values": {
+            "f1": "Veronica Gonzalez Amorosino",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF318CKK",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 10",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-025",
+          "values": {
+            "f1": "Anahi Pérez Lozano",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2a",
+            "f5": "PF3EN9GN",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-026",
+          "values": {
+            "f1": "Joaquin Martinez Cordova ",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad E14 Gen 4",
+            "f5": "PF4AQA4P",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-027",
+          "values": {
+            "f1": "Lucía Marcos ",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad E14 Gen 6",
+            "f5": "PF52WQEP",
+            "f6": "500 GB",
+            "f7": "16GB",
+            "f8": "13/10/2027",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-028",
+          "values": {
+            "f1": "Angeles Perri",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": " ThinkPad L14 Gen 3",
+            "f5": "PW046NPH",
+            "f6": "238 GB",
+            "f7": "16GB",
+            "f8": "2026-11-26T00:00:00",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-029",
+          "values": {
+            "f1": "Lucia Coronel",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad E14 Gen 4",
+            "f5": "PF4APYQY",
+            "f6": "238GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 10",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-030",
+          "values": {
+            "f1": "Florencia Guardia",
+            "f2": "Desktop",
+            "f3": "Suipacha",
+            "f4": "HP PRODESK",
+            "f5": "1500CD84-B8A2-4F46-B7B3-9DC9FB596287",
+            "f6": "256 GB",
+            "f7": "12GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-031",
+          "values": {
+            "f1": "CAJA 1",
+            "f2": "Desktop ",
+            "f3": "Suipacha",
+            "f4": "ThinkCentre m75q gen 2",
+            "f5": "MJ0JL90S",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "---",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-032",
+          "values": {
+            "f1": "CAJA 2",
+            "f2": "Desktop ",
+            "f3": "Suipacha",
+            "f4": "ThinkCentre m75q gen2",
+            "f5": "MJ0JL90X",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADO",
+            "f9": "OK",
+            "f10": null,
+            "f11": "---",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-033",
+          "values": {
+            "f1": "DEPOSITO 2",
+            "f2": "Desktop ",
+            "f3": "Suipacha",
+            "f4": "Hp Prodesk 400G3SFF ",
+            "f5": "MXL7181K45",
+            "f6": "256 GB",
+            "f7": "12GB",
+            "f8": "CADUCADO ",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-034",
+          "values": {
+            "f1": "ESTACION JONY",
+            "f2": "Notebook",
+            "f3": "CD",
+            "f4": "Lenovo E490",
+            "f5": "PF1ZKEHE",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADO ",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-035",
+          "values": {
+            "f1": "Lisandro Marino",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad E14 Gen 6",
+            "f5": "PF52XCA6",
+            "f6": "500 GB",
+            "f7": "16GB",
+            "f8": "CADUCADO ",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-036",
+          "values": {
+            "f1": "DEPOSITO 1",
+            "f2": "Notebook",
+            "f3": "CD",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF3EMF4W",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-037",
+          "values": {
+            "f1": "Florencia Burdieu",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPadL14Gen2a",
+            "f5": "PF3NSFK6",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-038",
+          "values": {
+            "f1": "DEPOSITO S01",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2a",
+            "f5": "PF3NS6FF",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-039",
+          "values": {
+            "f1": "JUANA ASTARLOA",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF3NSAYF",
+            "f6": "500 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-040",
+          "values": {
+            "f1": "ARIEL ROSETI",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad E14 Gen 6",
+            "f5": "PF52WW3D",
+            "f6": "250GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-041",
+          "values": {
+            "f1": "ELIANA JALED",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2a",
+            "f5": "PF3ENXHR",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-042",
+          "values": {
+            "f1": "RAMIRO CARUSO",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2a",
+            "f5": "PF30AFSL",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-043",
+          "values": {
+            "f1": "Labiano Carbone Agustin",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 2a",
+            "f5": "PF3NREX6",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": "2025-02-12T00:00:00",
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-044",
+          "values": {
+            "f1": "CAJA 3 (FACTURACION RIO)",
+            "f2": "Notebook",
+            "f3": "RIO",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF3NREWK",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADO ",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-045",
+          "values": {
+            "f1": "IGNACIO BERNABÓ (Estación encargado)",
+            "f2": "Notebook",
+            "f3": "Bariloche",
+            "f4": "ThinkPad L14 Gen 2a",
+            "f5": "PF3NPMPX",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-046",
+          "values": {
+            "f1": "IAN FORTUNATTI",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "ThinkPad L14 Gen 4",
+            "f5": "PW07HG7J",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "12 meses",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "OK"
+          }
+        },
+        {
+          "id": "computadoras-047",
+          "values": {
+            "f1": "DEPOSITO  S01",
+            "f2": "Notebook",
+            "f3": "CD",
+            "f4": "ThinkPad L14 Gen 2",
+            "f5": "PF3EMD33",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        },
+        {
+          "id": "computadoras-048",
+          "values": {
+            "f1": "DEPOSITO  S01",
+            "f2": "Notebook",
+            "f3": "CD",
+            "f4": "ThinkPad L14 Gen 2a",
+            "f5": "PF3NS6J9",
+            "f6": "256 GB",
+            "f7": "16GB",
+            "f8": "CADUCADA",
+            "f9": "OK",
+            "f10": null,
+            "f11": "W 11",
+            "f12": "NO APLICA"
+          }
+        }
+      ]
+    },
+    {
+      "id": "colectora-datos",
+      "name": "Colectora Datos",
+      "fields": [
+        {
+          "key": "f1",
+          "label": "Empleado"
+        },
+        {
+          "key": "f2",
+          "label": "Tipo de Equipo"
+        },
+        {
+          "key": "f3",
+          "label": "Ubicacion"
+        },
+        {
+          "key": "f4",
+          "label": "Modelo  de equipo"
+        },
+        {
+          "key": "f5",
+          "label": "Serie"
+        },
+        {
+          "key": "f6",
+          "label": "Espacio de Disco (Max)"
+        },
+        {
+          "key": "f7",
+          "label": "Memoria(Max)"
+        },
+        {
+          "key": "f8",
+          "label": "Termino de garantia"
+        },
+        {
+          "key": "f9",
+          "label": "ACTUALIZABLE"
+        },
+        {
+          "key": "f10",
+          "label": "FECHA ACTUALIZACION"
+        },
+        {
+          "key": "f11",
+          "label": "OS"
+        }
+      ],
+      "records": [
+        {
+          "id": "colectora-datos-001",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "COLECTORA DATOS",
+            "f3": null,
+            "f4": "Datalogic Scorpio X5",
+            "f5": "G22N20296",
+            "f6": "32 GB",
+            "f7": "3 GB",
+            "f8": "SI",
+            "f9": "NO",
+            "f10": "-",
+            "f11": "ANDROID 10"
+          }
+        },
+        {
+          "id": "colectora-datos-002",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "COLECTORA DATOS",
+            "f3": null,
+            "f4": "Datalogic Scorpio X5",
+            "f5": "G21M25551",
+            "f6": "32 GB",
+            "f7": "3 GB",
+            "f8": "SI",
+            "f9": "NO",
+            "f10": "-",
+            "f11": "ANDROID 10"
+          }
+        },
+        {
+          "id": "colectora-datos-003",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "COLECTORA DATOS",
+            "f3": null,
+            "f4": "ZEBRA TC21",
+            "f5": "22218523024788",
+            "f6": "32 GB",
+            "f7": "3 GB",
+            "f8": "NO",
+            "f9": "SI",
+            "f10": "-",
+            "f11": "ANDROID 11"
+          }
+        },
+        {
+          "id": "colectora-datos-004",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "COLECTORA DATOS",
+            "f3": null,
+            "f4": "ZEBRA TC21",
+            "f5": "24134523021440",
+            "f6": "32 GB",
+            "f7": "3 GB",
+            "f8": "SI",
+            "f9": "SI",
+            "f10": "-",
+            "f11": "ANDROID 11"
+          }
+        },
+        {
+          "id": "colectora-datos-005",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "COLECTORA DATOS",
+            "f3": null,
+            "f4": "ZEBRA TC21",
+            "f5": "24135523020297",
+            "f6": "32 GB",
+            "f7": "3 GB",
+            "f8": "SI",
+            "f9": "SI",
+            "f10": "-",
+            "f11": "ANDROID 11"
+          }
+        },
+        {
+          "id": "colectora-datos-006",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "PISTOLA CODIGO DE BARRA",
+            "f3": null,
+            "f4": "ZEBRA Ds2208",
+            "f5": "25098010561323",
+            "f6": "-",
+            "f7": "-",
+            "f8": "NO",
+            "f9": "NO",
+            "f10": "-",
+            "f11": "-"
+          }
+        },
+        {
+          "id": "colectora-datos-007",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "PISTOLA CODIGO DE BARRA",
+            "f3": null,
+            "f4": "ZEBRA Ds2208",
+            "f5": "25098010561315",
+            "f6": "-",
+            "f7": "-",
+            "f8": "NO",
+            "f9": "NO",
+            "f10": "-",
+            "f11": "-"
+          }
+        },
+        {
+          "id": "colectora-datos-008",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "PISTOLA CODIGO DE BARRA",
+            "f3": null,
+            "f4": "ZEBRA Ds2278",
+            "f5": "24088523700660",
+            "f6": "-",
+            "f7": "-",
+            "f8": "SI",
+            "f9": "NO",
+            "f10": "-",
+            "f11": "-"
+          }
+        },
+        {
+          "id": "colectora-datos-009",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "PISTOLA CODIGO DE BARRA",
+            "f3": null,
+            "f4": "ZEBRA Ds2278",
+            "f5": "23194523701064",
+            "f6": "-",
+            "f7": "-",
+            "f8": "SI",
+            "f9": "NO",
+            "f10": "-",
+            "f11": "-"
+          }
+        },
+        {
+          "id": "colectora-datos-010",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "PISTOLA CODIGO DE BARRA",
+            "f3": null,
+            "f4": "ZEBRA Ds2278",
+            "f5": "24087523701985",
+            "f6": "-",
+            "f7": "-",
+            "f8": "SI",
+            "f9": "NO",
+            "f10": "-",
+            "f11": "-"
+          }
+        },
+        {
+          "id": "colectora-datos-011",
+          "values": {
+            "f1": "DEPOSITO",
+            "f2": "PISTOLA CODIGO DE BARRA",
+            "f3": null,
+            "f4": "ZEBRA Ds2278",
+            "f5": "23195523700227",
+            "f6": "-",
+            "f7": "-",
+            "f8": "SI",
+            "f9": "NO",
+            "f10": "-",
+            "f11": "-"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tablet",
+      "name": "Tablet",
+      "fields": [
+        {
+          "key": "f1",
+          "label": "Tienda"
+        },
+        {
+          "key": "f2",
+          "label": "Modelo  de equipo"
+        },
+        {
+          "key": "f3",
+          "label": "Serie"
+        },
+        {
+          "key": "f4",
+          "label": "Posee ZNube"
+        },
+        {
+          "key": "f5",
+          "label": "N° Serie DRAGON"
+        },
+        {
+          "key": "f6",
+          "label": "Operador"
+        },
+        {
+          "key": "f7",
+          "label": "# Celular"
+        },
+        {
+          "key": "f8",
+          "label": "Empleado"
+        },
+        {
+          "key": "f9",
+          "label": "Tipo de Equipo"
+        },
+        {
+          "key": "f10",
+          "label": "Ubicacion"
+        },
+        {
+          "key": "f11",
+          "label": "Modelo  de equipo"
+        },
+        {
+          "key": "f12",
+          "label": "Serie"
+        },
+        {
+          "key": "f13",
+          "label": "Espacio de Disco (Max)"
+        },
+        {
+          "key": "f14",
+          "label": "Memoria (Max)"
+        },
+        {
+          "key": "f15",
+          "label": "Termino de garantia"
+        },
+        {
+          "key": "f16",
+          "label": "ACTUALIZABLE"
+        }
+      ],
+      "records": [
+        {
+          "id": "tablet-001",
+          "values": {
+            "f1": "OFICINA_ADM",
+            "f2": null,
+            "f3": null,
+            "f4": null,
+            "f5": null,
+            "f6": null,
+            "f7": null,
+            "f8": null,
+            "f9": null,
+            "f10": null,
+            "f11": null,
+            "f12": "El miércoles 8 en la oficina reviso donde está porque no lo sé. (ROSA)",
+            "f13": null,
+            "f14": null,
+            "f15": null,
+            "f16": null
+          }
+        },
+        {
+          "id": "tablet-002",
+          "values": {
+            "f1": "Tablet CD",
+            "f2": "Tablet ",
+            "f3": "CD",
+            "f4": "Lenovo M10",
+            "f5": null,
+            "f6": null,
+            "f7": null,
+            "f8": null,
+            "f9": null,
+            "f10": null,
+            "f11": null,
+            "f12": null,
+            "f13": null,
+            "f14": null,
+            "f15": null,
+            "f16": null
+          }
+        },
+        {
+          "id": "tablet-003",
+          "values": {
+            "f1": "Tablet CD",
+            "f2": "Tablet ",
+            "f3": "CD",
+            "f4": "Lenovo M10",
+            "f5": null,
+            "f6": null,
+            "f7": null,
+            "f8": null,
+            "f9": null,
+            "f10": null,
+            "f11": null,
+            "f12": null,
+            "f13": null,
+            "f14": null,
+            "f15": null,
+            "f16": null
+          }
+        },
+        {
+          "id": "tablet-004",
+          "values": {
+            "f1": "Tablet Suipacha ",
+            "f2": "Tablet ",
+            "f3": "Suipacha ",
+            "f4": "Lenovo TB- X606F",
+            "f5": "HA1QAJ52",
+            "f6": "64 GB",
+            "f7": "4GB",
+            "f8": null,
+            "f9": null,
+            "f10": null,
+            "f11": null,
+            "f12": null,
+            "f13": null,
+            "f14": null,
+            "f15": null,
+            "f16": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "faltantes",
+      "name": "Faltantes",
+      "fields": [
+        {
+          "key": "f1",
+          "label": "Empleado"
+        },
+        {
+          "key": "f2",
+          "label": "Tipo de Equipo"
+        },
+        {
+          "key": "f3",
+          "label": "Ubicacion"
+        },
+        {
+          "key": "f4",
+          "label": "Modelo  de equipo"
+        },
+        {
+          "key": "f5",
+          "label": "Serie"
+        },
+        {
+          "key": "f6",
+          "label": "Espacio de Disco (Max)"
+        },
+        {
+          "key": "f7",
+          "label": "Memoria(Max)"
+        },
+        {
+          "key": "f8",
+          "label": "Termino de garantia"
+        },
+        {
+          "key": "f9",
+          "label": "ACTUALIZABLE"
+        },
+        {
+          "key": "f10",
+          "label": "FECHA ACTUALIZACION"
+        },
+        {
+          "key": "f11",
+          "label": "OS"
+        }
+      ],
+      "records": [
+        {
+          "id": "faltantes-001",
+          "values": {
+            "f1": "Patagonia S/asignar",
+            "f2": "Notebook",
+            "f3": null,
+            "f4": "Dell Vostro 3405",
+            "f5": "7WX7ZJ3",
+            "f6": "256 GB",
+            "f7": "8GB",
+            "f8": "CADUCADA",
+            "f9": "SI",
+            "f10": null,
+            "f11": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "dadas-de-baja",
+      "name": "Dadas de baja",
+      "fields": [
+        {
+          "key": "f1",
+          "label": "Empleado"
+        },
+        {
+          "key": "f2",
+          "label": "Tipo de Equipo"
+        },
+        {
+          "key": "f3",
+          "label": "Ubicacion"
+        },
+        {
+          "key": "f4",
+          "label": "Modelo  de equipo"
+        },
+        {
+          "key": "f5",
+          "label": "Serie"
+        },
+        {
+          "key": "f6",
+          "label": "Espacio de Disco (Max)"
+        },
+        {
+          "key": "f7",
+          "label": "Memoria(Max)"
+        },
+        {
+          "key": "f8",
+          "label": "Termino de garantia"
+        },
+        {
+          "key": "f9",
+          "label": "ACTUALIZABLE"
+        }
+      ],
+      "records": [
+        {
+          "id": "dadas-de-baja-001",
+          "values": {
+            "f1": "Patagonia S/asignar",
+            "f2": "Notebook",
+            "f3": "Home Office",
+            "f4": "Lenovo V330 14IKB",
+            "f5": "MP1EZRHW",
+            "f6": "256 GB",
+            "f7": "8GB",
+            "f8": "CADUCADA",
+            "f9": "PROBLEMAS GENERALES APAGADO"
+          }
+        }
+      ]
+    }
+  ]
+}
