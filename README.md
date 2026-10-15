@@ -8,6 +8,7 @@ App web en español para consultar, buscar, agregar, editar y eliminar equipos. 
 - Búsqueda en todos los nombres de campo y valores, sin distinguir mayúsculas ni acentos.
 - Alta, edición, eliminación y exportación CSV por pestaña.
 - Persistencia SQLite en el volumen Docker `relevamiento_data`. La autenticación es opcional: si definís `APP_PASSWORD`, se solicitarán credenciales; si la dejás vacía, no se pedirá contraseña.
+- Bot de Telegram `sistemarelevamiento_bot`, conectado a la misma base de datos que el sitio y con búsqueda en todas las pestañas y columnas.
 
 La pestaña **Dadas de baja** no tenía encabezados; se cargó usando los primeros nueve encabezados de Computadoras, en el orden de los datos originales. En **Tablet** se conservaron los 16 campos y su orden, incluidos encabezados repetidos.
 
@@ -19,13 +20,22 @@ Subí todo el contenido de esta carpeta a la raíz de un repositorio Git. No sub
 
 1. Creá un Stack desde Git Repository y configurá URL y rama del repositorio.
 2. Usá `compose.yaml` como archivo del stack.
-3. `APP_PASSWORD` ahora es opcional. Si la dejás vacía, no se pedirá contraseña. `APP_USER` (por defecto `admin`) y `APP_PORT` (por defecto `8080`) también son opcionales.
-4. Desplegá el stack. Abrí `http://IP-DE-TU-SERVIDOR:APP_PORT` (puerto predeterminado 8080).
+3. `APP_PASSWORD` es opcional. Si la dejás vacía, no se pedirá contraseña. `APP_USER` es opcional (por defecto `admin`). La app publica el puerto `18088` del servidor.
+4. Desplegá el stack. Abrí `http://IP-DE-TU-SERVIDOR:18088`.
 5. Si estará disponible desde Internet, publicalo detrás de HTTPS en tu proxy inverso.
 
 Portainer construye la imagen con el Dockerfile del repositorio. El volumen `relevamiento_data` conserva los registros al recrear o actualizar el contenedor. Respaldá ese volumen periódicamente desde el host Docker.
 
 Al actualizar los archivos en GitHub, recreá/actualizá el stack desde Portainer. La base existente sigue en el volumen; las modificaciones guardadas en la app no se escriben de vuelta al Excel.
+
+## Activar el bot de Telegram
+
+1. En Telegram, abrí `@BotFather`. Creá el bot con `/newbot` o buscá el que ya tenés con `/mybots` y consultá su token. Podés usar `sistemarelevamiento_bot` como nombre de usuario si está disponible.
+2. En Portainer, abrí las variables del mismo Stack y agregá `TELEGRAM_BOT_TOKEN` con el token de BotFather. No lo publiques en GitHub.
+3. Actualizá/recreá el Stack. Se iniciará el contenedor del bot junto al sitio y compartirá su volumen SQLite.
+4. Abrí el bot en Telegram, mandale `/start` y escribí un dato que esté en la planilla, por ejemplo una serie o un nombre. También acepta `/buscar dato`.
+
+El bot busca coincidencias parciales en los valores de cualquier campo y devuelve los registros completos. Consulta la base al recibir cada búsqueda, así que ve las altas y modificaciones guardadas desde el sitio sin recargar archivos. Si querés limitar quién puede usarlo, definí `ALLOWED_CHAT_IDS` en Portainer como una lista de IDs separados por coma; si lo dejás vacío, cualquier persona que encuentre el bot podrá consultarlo.
 
 ## Inicio local opcional
 
@@ -35,4 +45,4 @@ Requiere Docker Compose:
 docker compose up --build -d
 ```
 
-Luego abrí `http://localhost:8080`.
+Luego abrí `http://localhost:18088`.

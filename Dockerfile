@@ -1,7 +1,7 @@
 FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PORT=8080 DATA_DIR=/data
 WORKDIR /app
-COPY app.py index.html app.js styles.css seed.json ./
+COPY app.py bot.py index.html app.js styles.css seed.json ./
 RUN mkdir -p /data && useradd --system --uid 10001 --create-home appuser && chown -R appuser:appuser /app /data
 USER appuser
 EXPOSE 8080
