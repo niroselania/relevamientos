@@ -32,6 +32,10 @@ def categories():
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self,*a,**kw): super().__init__(*a,directory=str(ROOT),**kw)
     def log_message(self,fmt,*args): print('%s - %s'%(self.address_string(),fmt%args),flush=True)
+    def end_headers(self):
+        if urlparse(self.path).path in {'/','/index.html','/app.js','/styles.css'}:
+            self.send_header('Cache-Control','no-store, no-cache, must-revalidate')
+        super().end_headers()
     def auth(self):
         if not PASSWORD:return True
         try:
