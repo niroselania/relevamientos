@@ -7,14 +7,14 @@ App web en español para consultar, buscar, agregar, editar y eliminar equipos. 
 - Las cinco pestañas detectadas: Computadoras, Colectora Datos, Tablet, Faltantes y Dadas de baja.
 - Búsqueda en todos los nombres de campo y valores, sin distinguir mayúsculas ni acentos.
 - Alta, edición, eliminación y exportación CSV por pestaña.
-- Importación masiva de libros `.xlsx`: actualiza coincidencias por número de serie, incorpora registros nuevos y conserva registros del sitio que no aparecen en el archivo.
+- Importación completa de libros `.xlsx`: actualiza coincidencias, agrega registros nuevos y elimina del sitio los que no aparecen en el archivo.
 - Color opcional por fila para distinguir registros sin afectar los demás.
 - Persistencia SQLite en el volumen Docker `relevamiento_data`. La autenticación es opcional: si definís `APP_PASSWORD`, se solicitarán credenciales; si la dejás vacía, no se pedirá contraseña.
 - Bot de Telegram `sistemarelevamiento_bot`, conectado a la misma base de datos que el sitio y con búsqueda en todas las pestañas y columnas.
 
 La pestaña **Dadas de baja** no tenía encabezados; se cargó usando los primeros nueve encabezados de Computadoras, en el orden de los datos originales. En **Tablet** se conservaron los 16 campos y su orden, incluidos encabezados repetidos.
 
-Para importar una planilla nueva, abrí el sitio y elegí **Importar Excel**. Seleccioná el `.xlsx` actualizado y confirmá. Los registros con una serie coincidente se actualizan; los que no existan se agregan. No se borran registros del sitio. Las pestañas del archivo deben conservar los nombres usados en el relevamiento.
+Para importar una planilla nueva, abrí el sitio y elegí **Importar Excel**. Seleccioná el `.xlsx` actualizado y confirmá. La importación sincroniza las cinco pestañas: actualiza equipos coincidentes, agrega los nuevos y borra los registros que ya no aparezcan en el Excel. Deben estar las cinco pestañas del relevamiento; si falta alguna, se cancela la importación. Hacé la importación solo con el archivo completo y actualizado. Se conservan los colores de los equipos que se pueden reconocer.
 
 Para marcar una fila, abrila, elegí un color (por ejemplo, **Naranja**) y guardá los cambios. El color queda asociado a esa fila; **Sin color** lo quita. Los otros registros no cambian.
 

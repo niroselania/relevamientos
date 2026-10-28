@@ -125,11 +125,13 @@ def import_workbook(raw):
         raise ValueError('No encontré las pestañas del relevamiento en este Excel')
     with connect() as db:
         cats={norm(c['name']):c for c in db.execute('SELECT * FROM categories')}
+        missing=set(cats)-set(sheet_map)
+        if missing:raise ValueError('Importación cancelada: faltan pestañas requeridas: '+', '.join(cats[key]['name'] for key in sorted(missing)))
         # La planilla original tiene una pestaña de bajas sin encabezados.
         if 'dadas de baja' in sheet_map and sheet_map['dadas de baja']:
             computer_rows=sheet_map.get('computadoras',[])
             if computer_rows:sheet_map['dadas de baja']=[(sheet_map['dadas de baja'][0][0],computer_rows[0][1][:9])]+sheet_map['dadas de baja']
-        summary={'updated':0,'added':0,'sheets':0,'unmatchedSheets':[]}
+        summary={'updated':0,'added':0,'removed':0,'sheets':0,'unmatchedSheets':[]}
         for sheet_name,rows in sheets:
             key=norm(sheet_name)
             if key not in cats:
@@ -137,18 +139,8 @@ def import_workbook(raw):
             if not rows:continue
             category=cats[key]; category_id=category['id']
             rows=sheet_map.get(key,rows)
-            if key=='dadas de baja' and rows and sheet_name.lower()=='dadas de baja':
-                # Header was injected above using the computer inventory columns.
-                pass
             header_row,header_values=rows[0]
-            # For the headerless bajas tab, the first source row is data; use the
-            # first nine computer headers and keep that first row for importing.
-            if key=='dadas de baja' and header_values and norm(str(header_values[0])) not in {'empleado','patagonia s/asignar'}:
-                computer=sheet_map.get('computadoras',[])
-                if not computer:raise ValueError('Necesito la pestaña Computadoras para identificar los campos de Dadas de baja')
-                headers=computer[0][1][:9]; data_rows=rows
-            else:
-                headers=header_values; data_rows=rows[1:]
+            headers=header_values; data_rows=rows[1:]
             headers=[str(h).strip() if h is not None and str(h).strip() else f'Campo {i+1}' for i,h in enumerate(headers)]
             old_fields=json.loads(category['fields']); old_sig=field_signature(old_fields)
             old_by_sig={sig:field for sig,field in zip(old_sig,old_fields)}
@@ -207,7 +199,10 @@ def import_workbook(raw):
                 else:
                     for field in new_fields:incoming.setdefault(field['key'],'')
                     rid=str(uuid.uuid4())
-                    db.execute("INSERT INTO records(id,category_id,data,position,source_row) VALUES(?,?,?,?,?)",(rid,category_id,json.dumps(incoming,ensure_ascii=False),pos,source_row));pos+=1;summary['added']+=1
+                    db.execute("INSERT INTO records(id,category_id,data,position,source_row) VALUES(?,?,?,?,?)",(rid,category_id,json.dumps(incoming,ensure_ascii=False),pos,source_row));pos+=1;used.add(rid);summary['added']+=1
+            obsolete=[record['id'] for record in all_records if record['id'] not in used]
+            if obsolete:
+                db.executemany('DELETE FROM records WHERE id=?',[(rid,) for rid in obsolete]);summary['removed']+=len(obsolete)
             summary['sheets']+=1
         return summary
 class Handler(SimpleHTTPRequestHandler):
